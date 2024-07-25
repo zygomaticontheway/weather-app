@@ -1,0 +1,22 @@
+body {
+  width: 100%;
+  max-width: 1920px;
+  height: 1080px;
+  margin: 0;
+  padding: 0;
+  top: 1601px;
+  left: -2209px;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('/public/medias/pic\ 2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

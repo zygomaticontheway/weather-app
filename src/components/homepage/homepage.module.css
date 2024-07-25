@@ -1,0 +1,16 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    /* border: 1px dashed grey; */
+}
+
+.searchPanel{
+
+}
+
+.weatherCardsContainer{
+
+}

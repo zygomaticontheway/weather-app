@@ -1,0 +1,24 @@
+.myButton {
+  width: 146px;
+  height: 48px;
+  border-radius: 50px;
+  border: none;
+  padding: 12px, 40px, 12px, 40px;
+  gap: 10px;
+  background: #3678B4;
+  font-size: 20px;
+  line-height: 24.2px;
+  font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 1);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 14px;
+  display: flex;
+}
+
+
+
