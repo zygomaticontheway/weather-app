@@ -1,63 +1,60 @@
-.errorContainer{
-    font-size: small;
-    background-color: rgba(255, 0, 0, 0.4);
-    width: 80%;
-    position:absolute;
-    left: -190px;
-    margin: 2px;
+.errorContainer {
+  font-size: small;
+  background-color: rgba(255, 0, 0, 0.4);
+  width: 80%;
+  position: absolute;
+  left: -190px;
+  margin: 2px;
 }
 
-form{
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- height: 100vh;
-
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.inputContainer{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 100%;
-    margin-top: 20px;
-    box-sizing: border-box;
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
 }
 
-input{
-    width: 100%;
-    max-width: 550px;
-    height: 48px;
-    top: 200px;
-    left: 605px;
-    gap: 10px;
-    box-sizing: border-box;
-    padding: 12px, 12px, 12px, 20px;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 40px;
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-sizing: border-box;
-
+input {
+  width: 100%;
+  max-width: 550px;
+  height: 48px;
+  top: 200px;
+  left: 605px;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 12px, 12px, 12px, 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 40px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
 }
 
 input::placeholder {
-    color: rgba(255, 255, 255, 1);
-    font-style: italic;
-    width: 77px;
-    height: 24px;
-    font-weight: 600;
-    font-size: 20px;
-    font-family: 'Inter', sans-serif;
-    line-height: 24.2px;
-    padding-left: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-style: italic;
+  width: 77px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  line-height: 24.2px;
+  padding-left: 20px;
 }
 
-.myButton::name{
-    width: 66px;
-    height: 24px;
-    font-weight: 400;
-  
+.myButton::name {
+  width: 66px;
+  height: 24px;
+  font-weight: 400;
 }

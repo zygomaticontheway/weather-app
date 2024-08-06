@@ -18,7 +18,7 @@ export const loginUser = createAsyncThunk(
   async (data: ILoginFormValues, thunkAPI) => {
 
     try {
-      const response: AxiosResponse<IUserData> = await axios.post("https://dummyjson.com/auth/login", tempData);
+      const response: AxiosResponse<IUserData> = await axios.post("https://dummyjson.com/auth/login", data);
 
       localStorage.setItem("user-token", response.data.token);
 
