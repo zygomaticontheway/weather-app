@@ -8,10 +8,10 @@ interface ILoginFormValues {
   password: string;
 }
 
-const tempData = {
-  username: "emilys",
-  password: "emilyspass"
-};
+// const tempData = {
+//   username: "emilys",
+//   password: "emilyspass"
+// };
 
 export const loginUser = createAsyncThunk(
   "loginUser",

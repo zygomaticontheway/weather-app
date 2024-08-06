@@ -1,10 +1,9 @@
 import MyButton from "../myButton/MyButton";
 import { useFormik } from "formik";
-import { useState } from "react";
 import * as Yup from 'yup';
 import styles from "./searchForm.module.css"
 import WeatherCard, { IWeatherCardProps } from "../weatherCard/WeatherCard";
-import { useAppDispatch } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { useNavigate } from "react-router-dom";
 import { fetchWeather } from "../../features/weather/weatherAction";
 
@@ -67,13 +66,9 @@ const initialWeather: IWeatherCardProps = {
 } 
 
 export default function SearchForm() {
-
+    const { weathers } = useAppSelector(state => state.weathers);
     const dispatch = useAppDispatch()
 
-    // const [inputValue, setInputValue] = useState<string>('');
-
-    const [fetchData, setFetchData] = useState<IWeatherCardProps>(initialWeather)
-    //можно передавать formik пропсом
     const formik = useFormik({
         initialValues: {
             inputValue: ''
@@ -82,7 +77,6 @@ export default function SearchForm() {
         validateOnChange: true,
         onSubmit: (values: IOneInputForm, { resetForm }) => {
             // setInputValue(values.inputValue)
-            // fetchWeather(values.inputValue);
             dispatch(fetchWeather(values))
             resetForm();
         }
@@ -101,7 +95,7 @@ export default function SearchForm() {
                 />
                 <MyButton type="submit" name="Search" />
             </div>
-            <WeatherCard name={fetchData.name} weather={fetchData.weather} main={fetchData.main} />
+            {weathers.id && <WeatherCard name={weathers.name} weather={weathers.weather} main={weathers.main} />}
         </form>
     )
 }

@@ -1,10 +1,10 @@
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import SearchForm from '../searchForm/SearchForm'
-import WeatherCard from '../weatherCard/WeatherCard'
 import style from './homepage.module.css'
 import { logoutUser } from '../../features/auth/authSlice';
 import MyButton from '../myButton/MyButton';
+import { loginUser } from '../../features/auth/authActions';
 
 export default function Homepage() {
 
@@ -12,8 +12,13 @@ export default function Homepage() {
     const dispatch = useAppDispatch();
     // console.log(links);
 
-    const loginUser = () => {
-        dispatch(loginUser())
+    const tempData = {
+        username: "emilys",
+        password: "emilyspass"
+      };
+
+    const tempLoginUser = () => {
+        dispatch(loginUser(tempData))
     }
 
     const handleLogout = () => {
@@ -31,7 +36,7 @@ export default function Homepage() {
             </div>
         )
     } else {
-        <MyButton name='login' onClick={loginUser() } />
+        <MyButton name='login' onClick={tempLoginUser} />
     }
 
 }
