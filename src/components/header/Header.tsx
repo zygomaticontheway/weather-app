@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import styles from "./header.module.css"
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { logoutUser } from "../../features/auth/authSlice";
+import { cleanWeathers } from "../../features/weather/weatherSlice";
 
 export default function Header() {
 
@@ -15,6 +16,7 @@ export default function Header() {
 
         //чистим state, выносим 'мусор' данных за пользователем
         dispatch(logoutUser())
+        dispatch(cleanWeathers())
     }
 
     return (

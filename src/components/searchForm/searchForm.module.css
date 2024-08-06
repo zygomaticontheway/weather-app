@@ -12,7 +12,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .inputContainer {
@@ -21,16 +21,16 @@ form {
   align-items: center;
   width: 100%;
   margin-top: 20px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 input {
   width: 100%;
   max-width: 550px;
   height: 48px;
-  top: 200px;
-  left: 605px;
-  gap: 10px;
+  /* top: 200px;
+  left: 605px; */
+  /* gap: 10px; */
   box-sizing: border-box;
   padding: 12px, 12px, 12px, 20px;
   border: 1px solid rgba(255, 255, 255, 1);
@@ -44,12 +44,12 @@ input {
 input::placeholder {
   color: rgba(255, 255, 255, 1);
   font-style: italic;
-  width: 77px;
+  width: 80%;
   height: 24px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Inter", sans-serif;
-  line-height: 24.2px;
+  /* line-height: 24.2px; */
   padding-left: 20px;
 }
 

@@ -33,10 +33,15 @@ const initialState: IWeatherState = {
   error: "",
 };
 
+
 export const weatherSlice = createSlice({
   name: "weatherSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    cleanWeathers: (state) => {
+      state.weathers = initialWeathers;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchWeather.pending, (state) => {
@@ -55,4 +60,4 @@ export const weatherSlice = createSlice({
 });
 
 export default weatherSlice;
-// export const { } = weatherSlice.actions
+export const { cleanWeathers } = weatherSlice.actions

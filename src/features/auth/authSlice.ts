@@ -32,19 +32,15 @@ const initialState: IUserState = {
 };
 
 export const authSlice = createSlice({
-  //указываем имя
-  name: "authSlice",
 
-  //передаем начальный state
+  name: "authSlice",
   initialState,
   reducers: {
-    //создаем синхронный action для очистки state
     logoutUser: (state) => {
       state.user = initialUser;
-    },
+    }
   },
 
-  //логика работы с асинх запр
   extraReducers: (builder) => {
     builder
       .addCase(loginUser.pending, (state) => {
@@ -70,5 +66,5 @@ export const authSlice = createSlice({
 });
 
 export default authSlice;
-//экспортируем синхронные actions из slice
+
 export const { logoutUser } = authSlice.actions;
