@@ -1,3 +1,4 @@
+import { useAppSelector } from "../../redux/hooks"
 import styles from "./weatherCard.module.css"
 
 export interface IWeatherCardProps {
@@ -44,26 +45,30 @@ export interface IWeatherCardProps {
     cod?: number
 }
 
-export default function WeatherCard({ name, weather, main }:IWeatherCardProps) {
- 
-    const weatherIcon = `http://openweathermap.org/img/w/${weather[0].icon}.png`
+export default function WeatherCard({ name, weather, main }: IWeatherCardProps) {
+
+    const { weathers } = useAppSelector(state => state.weathers);
+    const weatherIcon = `http://openweathermap.org/img/w/${weathers.weather[0].icon}.png`
+    const temperatureCelsius  = Math.floor(weathers.main.temp - 273.15)
 
     //button SAVE 
-    
+
     //button DELETE
 
     return (
         <div className={styles.card}>
             <div className={styles.temperatureAndCloudsContainer}>
-                <div className={styles.temperature}>{main.temp}</div>
+                <div className={styles.temperature}>{temperatureCelsius}°</div>
                 <div className={styles.clouds}>
-                    <img src={weatherIcon} alt={weather[0].description}/>
+                    <img src={weatherIcon} alt={weathers.weather[0].description} />
+                    <img src={weatherIcon} alt={weathers.weather[0].description} />
+                    <img src={weatherIcon} alt={weathers.weather[0].description} />
                 </div>
-                <div className={styles.city}>{name}</div>
-                <div className={styles.buttonContainer}>
-                    <button className={styles.save}>Save</button>
-                    <button className={styles.delete}>Delete</button>
-                </div>
+                <div className={styles.city}>{weathers.name}</div>
+            </div>
+            <div className={styles.buttonContainer}>
+                <button className={styles.save}>Save</button>
+                <button className={styles.delete}>Delete</button>
             </div>
         </div>
     )
